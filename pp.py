@@ -1,7 +1,28 @@
 import streamlit as st
 import pandas as pd
 from datetime import datetime
+from PIL import Image
+import matplotlib.pyplot as plt
+import numpy as np
+import plotly.express as px
+from time import sleep
 import re
+import os
+from docx import Document
+from docx.shared import Inches
+
+#  Запустите программу и разместите ее изображение
+st.title(" 📊 Project Productivity Professional ")
+st.markdown("---")
+st.write('')
+st.sidebar.title('***📊Добро пожаловать📊***')
+st.sidebar.markdown("---")
+image = Image.open("142.jpeg")
+st.sidebar.image(image, caption='', use_column_width=True)
+st.sidebar.markdown("---")
+st.sidebar.title("Информация о проекте")
+# Установка максимального количества ячеек для отображения в Pandas Styler
+pd.set_option("styler.render.max_elements", 559776)
 
 # Кнопки "Разработчики" و "График" для главного выключателя
 st.sidebar.title("Расчет трудоемкости")
